@@ -581,19 +581,19 @@ body:after {
   .site-blocks-cover h1 {
     font-size: 3rem;
     font-weight: 400;
-    color: #fff;
+    color:white;
     font-weight: 900; }
     @media (max-width: 991.98px) {
       .site-blocks-cover h1 {
         font-size: 2rem; } }
   .site-blocks-cover p {
-    color: white;
+    color: yellow;
     font-size: 1rem;
     line-height: 1.5;
     font-weight: 300; }
   .site-blocks-cover .desc {
     font-size: 1.4rem;
-    font-weight: 300; }
+    font-weight: 500; }
     .site-blocks-cover .desc a {
       color: rgba(255, 255, 255, 0.5);
       border-bottom: dotted 1px #fff; }
