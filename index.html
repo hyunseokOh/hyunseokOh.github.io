@@ -25,6 +25,18 @@
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167402084-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-167402084-1');
+    </script>
 
 </head>
 
@@ -71,13 +83,13 @@
                                         <li><a href="#education-section" class="nav-link">Education</a></li>
                                     </ul>
                                 </li>
-
                                 <li class="has-children">
-                                    <a href="#experience-section" class="nav-link">Experiences</a>
+                                    <a href="#experience-section" class="nav-link">Experience</a>
+
                                     <ul class="dropdown">
                                         <li><a href="#research-section" class="nav-link">Research Projects</a></li>
-                                        <li><a href="#pricing-section" class="nav-link">Education</a></li>
-                                        <li><a href="#service-section" class="nav-link">Skills</a></li>
+
+                                        <li><a href="#publication-section" class="nav-link">Publications</a></li>
                                         <!-- <li class="has-children">
                     <a href="#">More Links</a>
                     <ul class="dropdown">
@@ -88,9 +100,7 @@
                   </li> -->
                                     </ul>
                                 </li>
-                                <li><a href="#services-section" class="nav-link">Services</a></li>
-                                <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li>
-                                <li><a href="#blog-section" class="nav-link">Blog</a></li>
+                                <li><a href="#skill-section" class="nav-link">Computer Skills</a></li>
                                 <li><a href="#contact-section" class="nav-link">Contact</a></li>
                             </ul>
                         </nav>
@@ -168,7 +178,7 @@
 
         <section class='site-section' id="education-section">
             <div class="container">
-                <div class="row site-section" id='education-section'>
+                <div class="row mb-5 justify-content-center" id='education-section'>
                     <div class="col-12 text-center" data-aos="fade">
                         <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">Education</h2>
                     </div>
@@ -177,7 +187,7 @@
                     <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
                         <img src="images/ucsb.jpg" alt="Image" class="img-fluid">
                     </div>
-                    <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+                    <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="100">
                         <h3 class="h3 mb-4 text-black">
                             <a href="https://ucsb.edu">University of California, Santa Barbara</a></h3>
                         <h5 class="h5 mb-4 text-black">Sep 2020 - Present</h5>
@@ -189,7 +199,7 @@
                     <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
                         <img src="images/snu_crop.jpg" alt="Image" class="img-fluid">
                     </div>
-                    <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+                    <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="100">
                         <h3 class="h3 mb-4 text-black"><a href="https://snu.ac.kr">Seoul National University</a></h3>
                         <h5 class="h5 mb-4 text-black">Mar 2013 - Feb 2020</h5>
                         <ul class="list-unstyled ul-check success">
@@ -202,51 +212,48 @@
             </div>
         </section>
 
+
+
         <section class="site-section bg-light" id="experience-section">
             <div class="container">
-                <div class="row site-section">
+                <div class="row mb-5 justify-content-center">
                     <div class="col-12 text-center" data-aos="fade">
-                        <h2 class="section-title mb-3">Experiences</h2>
+                        <h2 class="section-title mb-3">Experience</h2>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class='col-lg-4' data-aos="fade-up" data-aos-delay="">
-                        <div class="row">
-                            <div class="col-sm-9 timeline">
-                                <p>Apr 2020 - Present</p>
-                            </div>
-                            <div class="col-sm-2 timeline-icon">
-                                <h2 class="h3 mb-4 text-center"><span><span class="text-primary icon-map-marker"></span></span>
-                                </h2>
-                                <!-- <h3 class="h3 mb-4 text-black">University of California, Santa Barbara</h3> -->
-                            </div>
-                        </div>
+
+                <div class="row" data-aos="fade-up" data-aos-delay="">
+                    <div class='col-1 col-lg-1 order-lg-2 mt-4'>
+                        <h2 class="h3 mb-4 text-center"><span><span class="text-primary icon-calendar"></span></span>
+                        </h2>
                     </div>
 
-                    <div class="col-lg-8 mb-5 pricing" data-aos="fade-up" data-aos-delay="">
+                    <div class='col-11 col-lg-3 order-lg-1 mt-4 timeline'>
+                        <p>Apr 2020 - Present</p>
+                    </div>
+
+                    <div class="col-lg-8 order-lg-3 mb-3 exp-item">
                         <h3 class="h3 mb-4"><a href="https://hallymmedialai.github.io">Hallym Medical A.I. Center</a></h3>
-                        <h5 class="h5 mb-4 text-black">A.I. Researcher / Engineer</h5>
+                        <h5 class="h5 mb-4 text-black">A.I. Research Engineer</h5>
                         <ul class="list-unstyled ul-check success">
                             <li>Developed Ninegaze detection system for strabismus diagnosis</li>
                         </ul>
                     </div>
                 </div>
-                <div class="row">
-                    <div class='col-lg-4' data-aos="fade-up" data-aos-delay="">
-                        <div class="row">
-                            <div class="col-lg-9 col-push-2 timeline">
-                                <p>Sep 2019 - Feb 2020</p>
-                            </div>
-                            <div class="col-lg-2 col-pull-9">
-                                <h2 class="h3 mb-4 text-center"><span><span class="text-primary icon-map-marker"></span></span>
-                                </h2>
-                                <!-- <h3 class="h3 mb-4 text-black">University of California, Santa Barbara</h3> -->
-                            </div>
-                        </div>
+
+
+                <div class="row" data-aos="fade-up" data-aos-delay="">
+                    <div class='col-1 col-lg-1 order-lg-2 mt-4'>
+                        <h2 class="h3 mb-4 text-center"><span><span class="text-primary icon-calendar"></span></span>
+                        </h2>
                     </div>
 
-                    <div class="col-lg-8 mb-5 pricing" data-aos="fade-up" data-aos-delay="">
+                    <div class='col-11 col-lg-3 order-lg-1 mt-4 timeline'>
+                        <p>Sep 2019 - Feb 2020</p>
+                    </div>
+
+                    <div class="col-lg-8 order-lg-3 mb-3 exp-item">
                         <h3 class="h3 mb-4"><a href="https://sites.google.com/view/quantumcomputingatsnu">Quantum Information and Quantum Computing Lab, SNU</a></h3>
                         <h5 class="h5 mb-4 text-black">Research Intern</h5>
                         <ul class="list-unstyled ul-check success">
@@ -254,60 +261,112 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section class='site-section' id="research-section">
-            <div class="container">
-                <div class="row mb-5 justify-content-center">
-                    <div class="col-md-7 text-center">
-                        <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">Research Projects</h2>
+
+
+                <div class="row" data-aos="fade-up" data-aos-delay="">
+                    <div class='col-1 col-lg-1 order-lg-2 mt-4'>
+                        <h2 class="h3 mb-4 text-center"><span><span class="text-primary icon-calendar"></span></span>
+                        </h2>
+                    </div>
+
+                    <div class='col-11 col-lg-3 order-lg-1 mt-4 timeline'>
+                        <p>Mar 2017 - Aug 2019</p>
+                    </div>
+
+                    <div class="col-lg-8 order-lg-3 mb-3 exp-item">
+                        <h3 class="h3 mb-4"><a href="https://www.iqslab.net/">Integrated Quantum Systems Lab, SNU</a></h3>
+                        <h5 class="h5 mb-4 text-black">Research Intern</h5>
+                        <ul class="list-unstyled ul-check success">
+                            <li>Developed a multiple nuclear spin detection program in NV center system</li>
+                            <li>Implemented a real-time adaptive feedback system for quantum dot qubits</li>
+                        </ul>
                     </div>
                 </div>
 
 
+                <div class="row" data-aos="fade-up" data-aos-delay="">
+                    <div class='col-1 col-lg-1 order-lg-2 mt-4'>
+                        <h2 class="h3 mb-4 text-center"><span><span class="text-primary icon-calendar"></span></span>
+                        </h2>
+                    </div>
+
+                    <div class='col-11 col-lg-3 order-lg-1 mt-4 timeline'>
+                        <p>May 2015 - Feb 2017</p>
+                    </div>
+
+                    <div class="col-lg-8 order-lg-3 mb-3 exp-item">
+                        <h3 class="h3 mb-4 text-primary">Military Service</h3>
+                        <h5 class="h5 mb-4 text-black">Auxiliary Police, Sergeant</h5>
+                        <ul class="list-unstyled ul-check success">
+                            <li>Fulfilled military duty as auxiliary police to safeguard public safety</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+        <section class='site-section' id="research-section">
+            <div class="container">
+                <div class="row mb-5 justify-content-center">
+                    <div class="col-12 text-center" data-aos="fade-up">
+                        <h2 class="section-title mb-3">Research Experience</h2>
+                    </div>
+                </div>
 
 
                 <div class="row">
-                    <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+                    <div class="col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="">
 
                         <div class="owl-carousel slide-one-item-alt">
                             <img src="images/slide_1.jpg" alt="Image" class="img-fluid">
                             <img src="images/slide_2.jpg" alt="Image" class="img-fluid">
                             <img src="images/slide_3.jpg" alt="Image" class="img-fluid">
                             <img src="images/slide_4.jpg" alt="Image" class="img-fluid">
+                            <img src="images/slide_1.jpg" alt="image" class="img-fluid">
                         </div>
                         <div class="custom-direction">
                             <a href="#" class="custom-prev"><span><span class="icon-keyboard_backspace"></span></span></a><a href="#" class="custom-next"><span><span class="icon-keyboard_backspace"></span></span></a>
                         </div>
 
                     </div>
-                    <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-7 ml-auto" data-aos="fade-up" data-aos-delay="100">
 
                         <div class="owl-carousel slide-one-item-alt-text">
                             <div>
-                                <h2 class="section-title mb-3">Minimal and Modern Design</h2>
+                                <h3 class="section-title mb-3">Medical Machine Learning</h3>
                                 <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 <p>Est qui eos quasi ratione nostrum excepturi id recusandae fugit omnis ullam pariatur itaque nisi voluptas impedit Quo suscipit omnis iste velit maxime.</p>
 
                                 <p><a href="#" class="btn btn-primary mr-2 mb-2">Learn More</a></p>
                             </div>
                             <div>
-                                <h2 class="section-title mb-3">Do things with love</h2>
+                                <h2 class="section-title mb-3">Diamond NV Center</h2>
+                                <p class="lead">Developed a multiple nuclear spin detection program in NV center system</p>
+                                <p>Est qui eos quasi ratione nostrum excepturi id recusandae fugit omnis ullam pariatur itaque nisi voluptas impedit Quo suscipit omnis iste velit maxime.</p>
+
+                                <p><a href="#" class="btn btn-primary mr-2 mb-2">Learn More</a></p>
+                            </div>
+                            <div>
+                                <h2 class="section-title mb-3">Trapped-Ion</h2>
                                 <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 <p>Est qui eos quasi ratione nostrum excepturi id recusandae fugit omnis ullam pariatur itaque nisi voluptas impedit Quo suscipit omnis iste velit maxime.</p>
 
                                 <p><a href="#" class="btn btn-primary mr-2 mb-2">Learn More</a></p>
                             </div>
                             <div>
-                                <h2 class="section-title mb-3">Take your business online</h2>
+                                <h2 class="section-title mb-3">Quantum Dot</h2>
                                 <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 <p>Est qui eos quasi ratione nostrum excepturi id recusandae fugit omnis ullam pariatur itaque nisi voluptas impedit Quo suscipit omnis iste velit maxime.</p>
 
                                 <p><a href="#" class="btn btn-primary mr-2 mb-2">Learn More</a></p>
                             </div>
                             <div>
-                                <h2 class="section-title mb-3">4 Our Dedicated Professionals</h2>
+                                <h2 class="section-title mb-3">Optical Tweezer</h2>
                                 <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 <p>Est qui eos quasi ratione nostrum excepturi id recusandae fugit omnis ullam pariatur itaque nisi voluptas impedit Quo suscipit omnis iste velit maxime.</p>
 
@@ -318,6 +377,219 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section class='site-section' id="publication-section">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12 text-center" data-aos="fade-up">
+                        <h2 class="section-title mb-3">Publications</h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12" data-aos="fade-up">
+                        <ul class="list-unstyled ul-check primary text-black">
+                            <li><b>H. Oh</b>, J. Yun, M. H. Abobeih, K. Jung, K.Kim, T. H. Taminiau, and D. Kim, Algorithmic decomposition for efficient multiple nuclear spin detection in diamond, <em>Scientific Reports</em> <b>under review</b>. (<a href="https://arxiv.org/abs/2003.00178">arXiv</a>)</li>
+                            <li>K. Jung, M. H. Abobeih, J. Yun, G. Kim, <b>H. Oh</b>, H. Ang, T. H. Taminiau, and D. Kim, Deep learning enhanced individual nuclear spin detection and localization in complex electron-nuclear spin registers, Manuscript in preparation.
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="site-section" id="skill-section">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12 text-center" data-aos="fade up">
+                        <h2 class="section-title mb-3">Computer Skills</h2>
+                    </div>
+                </div>
+                <div class="row align-items-stretch">
+                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+                        <div class="unit-4">
+                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-startup"></span></div>
+                            <div>
+                                <h3>Business Consulting</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                                <p><a href="#">Learn More</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="unit-4">
+                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-graphic-design"></span></div>
+                            <div>
+                                <h3>Market Analysis</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                                <p><a href="#">Learn More</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="unit-4">
+                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-settings"></span></div>
+                            <div>
+                                <h3>User Monitoring</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                                <p><a href="#">Learn More</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="">
+                        <div class="unit-4">
+                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-idea"></span></div>
+                            <div>
+                                <h3>Insurance Consulting</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                                <p><a href="#">Learn More</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="unit-4">
+                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-smartphone"></span></div>
+                            <div>
+                                <h3>Financial Investment</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                                <p><a href="#">Learn More</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="unit-4">
+                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-head"></span></div>
+                            <div>
+                                <h3>Financial Management</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                                <p><a href="#">Learn More</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="site-section" id="portfolio-section">
+
+
+            <div class="container">
+
+                <div class="row mb-3">
+                    <div class="col-12 text-center" data-aos="fade">
+                        <h2 class="section-title mb-3">Portfolio</h2>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mb-5" data-aos="fade-up">
+                    <div id="filters" class="filters text-center button-group col-md-7">
+                        <button class="btn btn-primary active" data-filter="*">All</button>
+                        <button class="btn btn-primary" data-filter=".web">Web</button>
+                        <button class="btn btn-primary" data-filter=".design">Design</button>
+                        <button class="btn btn-primary" data-filter=".brand">Brand</button>
+                    </div>
+                </div>
+
+                <div id="posts" class="row no-gutter">
+                    <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                        <a href="images/img_1.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_1.jpg">
+                        </a>
+                    </div>
+                    <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                        <a href="images/img_2.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_2.jpg">
+                        </a>
+                    </div>
+
+                    <div class="item brand col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                        <a href="images/img_3.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_3.jpg">
+                        </a>
+                    </div>
+
+                    <div class="item design col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+
+                        <a href="images/img_4.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_4.jpg">
+                        </a>
+
+                    </div>
+
+                    <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                        <a href="images/img_5.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_5.jpg">
+                        </a>
+                    </div>
+
+                    <div class="item brand col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                        <a href="images/img_6.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_6.jpg">
+                        </a>
+                    </div>
+
+                    <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                        <a href="images/img_7.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_7.jpg">
+                        </a>
+                    </div>
+
+                    <div class="item design col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                        <a href="images/img_8.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_8.jpg">
+                        </a>
+                    </div>
+
+                    <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                        <a href="images/img_9.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_9.jpg">
+                        </a>
+                    </div>
+
+                    <div class="item design col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                        <a href="images/img_10.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_10.jpg">
+                        </a>
+                    </div>
+
+                    <div class="item brand col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                        <a href="images/img_11.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_11.jpg">
+                        </a>
+                    </div>
+
+                    <div class="item design col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                        <a href="images/img_12.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_12.jpg">
+                        </a>
+                    </div>
+
+                    <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                        <a href="images/img_13.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_13.jpg">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
         </section>
 
 
@@ -483,201 +755,7 @@
             </div>
         </section> -->
 
-        <section class="site-section" id="portfolio-section">
-
-
-            <div class="container">
-
-                <div class="row mb-3">
-                    <div class="col-12 text-center" data-aos="fade">
-                        <h2 class="section-title mb-3">Portfolio</h2>
-                    </div>
-                </div>
-
-                <div class="row justify-content-center mb-5" data-aos="fade-up">
-                    <div id="filters" class="filters text-center button-group col-md-7">
-                        <button class="btn btn-primary active" data-filter="*">All</button>
-                        <button class="btn btn-primary" data-filter=".web">Web</button>
-                        <button class="btn btn-primary" data-filter=".design">Design</button>
-                        <button class="btn btn-primary" data-filter=".brand">Brand</button>
-                    </div>
-                </div>
-
-                <div id="posts" class="row no-gutter">
-                    <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-                        <a href="images/img_1.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
-                            <span class="icon-search2"></span>
-                            <img class="img-fluid" src="images/img_1.jpg">
-                        </a>
-                    </div>
-                    <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-                        <a href="images/img_2.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
-                            <span class="icon-search2"></span>
-                            <img class="img-fluid" src="images/img_2.jpg">
-                        </a>
-                    </div>
-
-                    <div class="item brand col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-                        <a href="images/img_3.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
-                            <span class="icon-search2"></span>
-                            <img class="img-fluid" src="images/img_3.jpg">
-                        </a>
-                    </div>
-
-                    <div class="item design col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-
-                        <a href="images/img_4.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
-                            <span class="icon-search2"></span>
-                            <img class="img-fluid" src="images/img_4.jpg">
-                        </a>
-
-                    </div>
-
-                    <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-                        <a href="images/img_5.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
-                            <span class="icon-search2"></span>
-                            <img class="img-fluid" src="images/img_5.jpg">
-                        </a>
-                    </div>
-
-                    <div class="item brand col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-                        <a href="images/img_6.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
-                            <span class="icon-search2"></span>
-                            <img class="img-fluid" src="images/img_6.jpg">
-                        </a>
-                    </div>
-
-                    <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-                        <a href="images/img_7.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
-                            <span class="icon-search2"></span>
-                            <img class="img-fluid" src="images/img_7.jpg">
-                        </a>
-                    </div>
-
-                    <div class="item design col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-                        <a href="images/img_8.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
-                            <span class="icon-search2"></span>
-                            <img class="img-fluid" src="images/img_8.jpg">
-                        </a>
-                    </div>
-
-                    <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-                        <a href="images/img_9.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
-                            <span class="icon-search2"></span>
-                            <img class="img-fluid" src="images/img_9.jpg">
-                        </a>
-                    </div>
-
-                    <div class="item design col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-                        <a href="images/img_10.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
-                            <span class="icon-search2"></span>
-                            <img class="img-fluid" src="images/img_10.jpg">
-                        </a>
-                    </div>
-
-                    <div class="item brand col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-                        <a href="images/img_11.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
-                            <span class="icon-search2"></span>
-                            <img class="img-fluid" src="images/img_11.jpg">
-                        </a>
-                    </div>
-
-                    <div class="item design col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-                        <a href="images/img_12.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
-                            <span class="icon-search2"></span>
-                            <img class="img-fluid" src="images/img_12.jpg">
-                        </a>
-                    </div>
-
-                    <div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-                        <a href="images/img_13.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
-                            <span class="icon-search2"></span>
-                            <img class="img-fluid" src="images/img_13.jpg">
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-        </section>
-
-
-        <section class="site-section border-bottom bg-light" id="services-section">
-            <div class="container">
-                <div class="row mb-5">
-                    <div class="col-12 text-center" data-aos="fade">
-                        <h2 class="section-title mb-3">Our Services</h2>
-                    </div>
-                </div>
-                <div class="row align-items-stretch">
-                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-                        <div class="unit-4">
-                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-startup"></span></div>
-                            <div>
-                                <h3>Business Consulting</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                                <p><a href="#">Learn More</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="unit-4">
-                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-graphic-design"></span></div>
-                            <div>
-                                <h3>Market Analysis</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                                <p><a href="#">Learn More</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="unit-4">
-                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-settings"></span></div>
-                            <div>
-                                <h3>User Monitoring</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                                <p><a href="#">Learn More</a></p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="">
-                        <div class="unit-4">
-                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-idea"></span></div>
-                            <div>
-                                <h3>Insurance Consulting</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                                <p><a href="#">Learn More</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="unit-4">
-                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-smartphone"></span></div>
-                            <div>
-                                <h3>Financial Investment</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                                <p><a href="#">Learn More</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="unit-4">
-                            <div class="unit-4-icon mr-4"><span class="text-primary flaticon-head"></span></div>
-                            <div>
-                                <h3>Financial Management</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                                <p><a href="#">Learn More</a></p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="site-section testimonial-wrap" id="testimonials-section" data-aos="fade">
+        <!-- <section class="site-section testimonial-wrap" id="testimonials-section" data-aos="fade">
             <div class="container">
                 <div class="row mb-5">
                     <div class="col-12 text-center">
@@ -747,9 +825,9 @@
                 </div>
 
             </div>
-        </section>
+        </section> -->
 
-        <section class="site-section bg-light" id="pricing-section">
+        <!-- <section class="site-section bg-light" id="pricing-section">
             <div class="container">
                 <div class="row mb-5">
                     <div class="col-12 text-center" data-aos="fade-up">
@@ -819,96 +897,11 @@
                 </div>
 
             </div>
-        </section>
-
-        <section class="site-section" id="about-section">
-            <div class="container">
-                <div class="row mb-5">
-
-                    <div class="col-lg-5 ml-auto mb-5 order-1 order-lg-2" data-aos="fade" data-aos="fade-up" data-aos-delay="">
-                        <img src="images/about_1.jpg" alt="Image" class="img-fluid rounded">
-                    </div>
-                    <div class="col-lg-6 order-2 order-lg-1" data-aos="fade">
-
-                        <div class="row">
+        </section> -->
 
 
 
-                            <div class="col-md-12 mb-md-5 mb-0 col-lg-6" data-aos="fade-up" data-aos-delay="">
-                                <div class="unit-4">
-                                    <div class="unit-4-icon mr-4 mb-3"><span class="text-primary flaticon-head"></span></div>
-                                    <div>
-                                        <h3>Web &amp; Mobile Specialties</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis consect.</p>
-                                        <p class="mb-0"><a href="#">Learn More</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 mb-md-5 mb-0 col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                                <div class="unit-4">
-                                    <div class="unit-4-icon mr-4 mb-3"><span class="text-primary flaticon-smartphone"></span></div>
-                                    <div>
-                                        <h3>Intuitive Thinkers</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis.</p>
-                                        <p class="mb-0"><a href="#">Learn More</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <div class="row">
-            <div class="col-lg-6">
-
-                <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-black h4 mb-4">Can I accept both Paypal and Stripe?</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
-                </div>
-
-                <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-black h4 mb-4">What available is refund period?</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
-                </div>
-
-                <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-black h4 mb-4">Can I accept both Paypal and Stripe?</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
-                </div>
-
-                <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-black h4 mb-4">What available is refund period?</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
-                </div>
-            </div>
-            <div class="col-lg-6">
-
-                <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-black h4 mb-4">Where are you from?</h3>
-                    <p>Voluptatum nobis obcaecati perferendis dolor totam unde dolores quod maxime corporis officia et. Distinctio assumenda minima maiores.</p>
-                </div>
-
-                <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-black h4 mb-4">What is your opening time?</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
-                </div>
-
-                <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-black h4 mb-4">Can I accept both Paypal and Stripe?</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
-                </div>
-
-                <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-black h4 mb-4">What available is refund period?</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
-                </div>
-            </div>
-        </div>
-
-
+        <!-- 
         <section class="site-section" id="blog-section">
             <div class="container">
                 <div class="row mb-5">
@@ -955,7 +948,7 @@
                 </div>
             </div>
         </section>
-
+ -->
 
 
 
