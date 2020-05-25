@@ -176,7 +176,7 @@ body:after {
 
 @media (min-width: 768px) {
     .site-footer {
-        padding: 8em 0;
+        padding: 4em 0;
     }
 }
 
@@ -2904,4 +2904,8 @@ figure figcaption {
 .exp-item {
     background: #fff;
     padding: 23px;
+}
+
+.text-grey {
+    color: grey !important;
 }
