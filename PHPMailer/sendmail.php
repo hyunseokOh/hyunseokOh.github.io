@@ -16,10 +16,10 @@ $mail->Host = "smtp.gmail.com"; // use $mail->Host = gethostbyname('smtp.gmail.c
 $mail->Port = 587; // TLS only
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // ssl is deprecated
 $mail->SMTPAuth = true;
-$mail->Username = 'hyunseok0222'; // email
+$mail->Username = 'hyunseok0222@gmail.com'; // email
 $mail->Password = 'ohszang1'; // password
 $mail->setFrom( $_POST["email"],  $_POST["fname"]." ".$_POST["lname"]); // From email and name
-$mail->addAddress('hyunseok0222', 'Hyunseok Oh'); // to email and name
+$mail->addAddress('hyunseok0222@gmail.com', 'Hyunseok Oh'); // to email and name
 $mail->Subject =  $_POST["subject"];
 $mail->msgHTML($_POST["message"]); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
 $mail->AltBody = 'HTML messaging not supported'; // If html emails is not supported by the receiver, show this body
