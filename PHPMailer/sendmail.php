@@ -1,19 +1,18 @@
 ﻿<?php
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
 
-require $_SERVER['DOCUMENT_ROOT'] . '/Sendmail/Exception.php';
-require $_SERVER['DOCUMENT_ROOT'] . '/Sendmail/PHPMailer.php';
-require $_SERVER['DOCUMENT_ROOT'] . '/Sendmail/SMTP.php';
+require '../vendor/autoload.php';
+
 
 $mail = new PHPMailer;
 $mail->setLanguage('ko','');
 $mail->isSMTP(); 
 $mail->CharSet = 'utf-8';
-$mail->SMTPDebug = 0; // 0 = off (for production use) - 1 = client messages - 2 = client and server messages
+$mail->SMTPDebug = SMTP::DEBUG_SERVER; // 0 = off (for production use) - 1 = client messages - 2 = client and server messages
 $mail->Host = "smtp.gmail.com"; // use $mail->Host = gethostbyname('smtp.gmail.com'); // if your network does not support SMTP over IPv6
 $mail->Port = 587; // TLS only
-$mail->SMTPSecure = 'tls'; // ssl is deprecated
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // ssl is deprecated
 $mail->SMTPAuth = true;
 $mail->Username = 'hyunseok0222'; // email
 $mail->Password = 'ohszang1'; // password
