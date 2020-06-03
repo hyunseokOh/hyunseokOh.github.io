@@ -17,10 +17,10 @@ $mail->SMTPSecure = 'tls'; // ssl is deprecated
 $mail->SMTPAuth = true;
 $mail->Username = 'hyunseok0222'; // email
 $mail->Password = 'ohszang1'; // password
-$mail->setFrom( $_POST["from_mail"],  $_POST["from_name"]); // From email and name
+$mail->setFrom( $_POST["email"],  $_POST["fname"]+$_POST["lname"]); // From email and name
 $mail->addAddress('hyunseok0222', 'Hyunseok Oh'); // to email and name
 $mail->Subject =  $_POST["subject"];
-$mail->msgHTML($_POST["body"]); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
+$mail->msgHTML($_POST["message"]); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
 $mail->AltBody = 'HTML messaging not supported'; // If html emails is not supported by the receiver, show this body
 // $mail->addAttachment('images/phpmailer_mini.png'); //Attach an image file
 
