@@ -8,7 +8,7 @@ require 'src/PHPMailer.php';
 require 'src/SMTP.php';
 
 $mail = new PHPMailer;
-$mail->setLanguage('ko','');
+// $mail->setLanguage('ko','');
 $mail->isSMTP(); 
 $mail->CharSet = 'utf-8';
 $mail->SMTPDebug = SMTP::DEBUG_SERVER; // 0 = off (for production use) - 1 = client messages - 2 = client and server messages
