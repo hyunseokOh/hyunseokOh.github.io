@@ -3,9 +3,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
-require 'src/Exception.php';
-require 'src/PHPMailer.php';
-require 'src/SMTP.php';
+require './src/Exception.php';
+require './src/PHPMailer.php';
+require './src/SMTP.php';
 
 $mail = new PHPMailer;
 // $mail->setLanguage('ko','');
@@ -25,10 +25,14 @@ $mail->msgHTML($_POST["message"]); //$mail->msgHTML(file_get_contents('contents.
 $mail->AltBody = 'HTML messaging not supported'; // If html emails is not supported by the receiver, show this body
 // $mail->addAttachment('images/phpmailer_mini.png'); //Attach an image file
 
-if(!$mail->send()){
-    //echo "<script>alert('메일 발송에 실패 했습니다.');  history.back();</script> Mailer Error: " . $mail->ErrorInfo;
-    echo "<script>alert('메일 발송에 실패 했습니다.');  history.back();</script>";
-}else{
-    echo "<script>alert('메일이 발송 되었습니다.');  history.back();</script>";
+if (!$mail->send()) {
+    echo 'Mailer Error: '. $mail->ErrorInfo;
+} else {
+    echo 'Message sent!';
+    //Section 2: IMAP
+    //Uncomment these to save your message in the 'Sent Mail' folder.
+    #if (save_mail($mail)) {
+    #    echo "Message saved!";
+    #}
 }
 ?>
