@@ -1,7 +1,7 @@
 ﻿<?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer;
+use PHPMailer\Exception;
+use PHPMailer\SMTP;
 
 require $_SERVER["DOCUMENT_ROOT"].'/PHPMailer/src/Excegitption.php';
 require $_SERVER["DOCUMENT_ROOT"].'/PHPMailer/src/PHPMailer.php';
