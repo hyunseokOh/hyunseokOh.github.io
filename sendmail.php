@@ -3,9 +3,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
-require '$_SERVER["DOCUMENT_ROOT"]/PHPMailer/src/Exception.php';
-require '$_SERVER["DOCUMENT_ROOT"]/PHPMailer/src/PHPMailer.php';
-require '$_SERVER["DOCUMENT_ROOT"]/PHPMailer/src/SMTP.php';
+require $_SERVER["DOCUMENT_ROOT"].'/PHPMailer/src/Exception.php';
+require $_SERVER["DOCUMENT_ROOT"].'/PHPMailer/src/PHPMailer.php';
+require $_SERVER["DOCUMENT_ROOT"].'/PHPMailer/src/SMTP.php';
 
 $mail = new PHPMailer;
 // $mail->setLanguage('ko','');
