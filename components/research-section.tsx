@@ -87,11 +87,11 @@ export function ResearchSection() {
                   {/* seam gradient blends the light image into the dark card */}
                   <span
                     aria-hidden
-                    className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-background/90 to-transparent"
+                    className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-background/90 to-transparent"
                   />
                   {p.metric && (
                     <div className="absolute bottom-3 left-4 flex items-baseline gap-2">
-                      <span className="font-mono text-2xl tracking-tight text-highlight-2 [text-shadow:0_1px_10px_var(--background)]">
+                      <span className="font-mono text-xl tracking-tight text-highlight-2 [text-shadow:0_1px_10px_var(--background)]">
                         {p.metric.value}
                       </span>
                       <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-foreground/80 [text-shadow:0_1px_8px_var(--background)]">
