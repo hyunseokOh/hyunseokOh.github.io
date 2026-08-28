@@ -32,7 +32,7 @@ export function AboutSection() {
         <div>
           <Reveal from="right">
             <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.35em] text-primary">
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary animate-quantum-blink" />
               About
             </p>
           </Reveal>

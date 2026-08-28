@@ -58,7 +58,7 @@ export function ExperienceSection() {
       <div className="mx-auto w-full max-w-5xl px-6 md:px-10">
         <Reveal>
           <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.35em] text-primary">
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary animate-quantum-blink" />
             Experience
           </p>
           <h2 className="mt-6 text-balance font-sans text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
@@ -81,8 +81,8 @@ export function ExperienceSection() {
                 aria-hidden
                 className="absolute left-0 top-1.5 flex h-4 w-4 items-center justify-center md:h-5 md:w-5"
               >
-                <span className="absolute inset-0 rounded-full bg-primary/25" />
-                <span className="relative h-2 w-2 rounded-full bg-primary shadow-[0_0_12px_2px_var(--primary)] md:h-2.5 md:w-2.5" />
+                <span className={`absolute inset-0 rounded-full bg-primary/25 ${i === 0 ? "animate-quantum-blink" : ""}`} />
+                <span className={`relative h-2 w-2 rounded-full bg-primary shadow-[0_0_12px_2px_var(--primary)] md:h-2.5 md:w-2.5" ${i === 0 ? "animate-quantum-blink" : ""}`} />
               </span>
 
               <div className="flex flex-col gap-1.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">

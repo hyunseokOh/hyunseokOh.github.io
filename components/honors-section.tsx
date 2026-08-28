@@ -52,7 +52,7 @@ export function HonorsSection() {
       <div className="mx-auto w-full max-w-5xl px-6 md:px-10">
         <Reveal>
           <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.35em] text-primary">
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary animate-quantum-blink" />
             Honors, Awards &amp; Fellowships
           </p>
           <h2 className="mt-6 text-balance font-sans text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
