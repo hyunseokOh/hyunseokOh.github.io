@@ -6,8 +6,9 @@ export function SiteNav() {
           href="#home-section"
           className="flex items-center gap-2 font-mono text-sm tracking-tight"
         >
-          <span className="inline-block h-2 w-2 rotate-45 bg-primary" />
-          Hyunseok Oh<span className="text-muted-foreground">Quantum Hardware Engineer</span>
+          <span className="inline-block h-2 w-2 rotate-45 bg-primary animate-quantum-blink" />
+          <span className="text-highlight">Hyunseok Oh</span>
+          Quantum Hardware Engineer
         </a>
         <nav className="hidden items-center gap-8 font-mono text-xs uppercase tracking-widest text-muted-foreground sm:flex">
           <a href="#home-section" className="transition-colors hover:text-foreground">
