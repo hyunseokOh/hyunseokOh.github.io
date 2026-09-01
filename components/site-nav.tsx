@@ -7,7 +7,7 @@ export function SiteNav() {
           className="flex items-center gap-2 font-mono text-sm tracking-tight"
         >
           <span className="inline-block h-2 w-2 rotate-45 bg-primary animate-quantum-blink" />
-          <span className="text-highlight">Hyunseok Oh</span>
+          <span className="text-highlight">Hyunseok (Dan) Oh</span>
           Quantum Hardware Engineer
         </a>
         <nav className="hidden items-center gap-8 font-mono text-xs uppercase tracking-widest text-muted-foreground sm:flex">

@@ -30,7 +30,7 @@ export function HeroSection() {
         </p>
 
         <h1 className="animate-quantum-rise mt-6 text-balance font-sans text-5xl font-bold leading-[0.95] tracking-tight sm:text-7xl lg:text-8xl" style={{ animationDelay: "0.05s" }}>
-          Hyunseok Oh
+          Hyunseok (Dan) Oh
         </h1>
 
         <div className="animate-quantum-rise mt-5 flex flex-wrap items-center gap-x-4 gap-y-2" style={{ animationDelay: "0.12s" }}>
