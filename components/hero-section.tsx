@@ -29,7 +29,7 @@ export function HeroSection() {
           Portfolio
         </p>
 
-        <h1 className="animate-quantum-rise mt-6 text-balance font-sans text-5xl font-bold leading-[0.95] tracking-tight sm:text-7xl lg:text-8xl" style={{ animationDelay: "0.05s" }}>
+        <h1 className="animate-quantum-rise mt-6 text-balance font-sans text-5xl font-bold leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl" style={{ animationDelay: "0.05s" }}>
           Hyunseok (Dan) Oh
         </h1>
 

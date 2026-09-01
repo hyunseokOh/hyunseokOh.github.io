@@ -120,7 +120,7 @@ export function ContactSection() {
 
         <Reveal delay={520}>
           <p className="mt-16 text-center font-mono text-xs uppercase tracking-[0.28em] text-muted-foreground/70">
-            Hyunseok Oh · Quantum Hardware Engineer
+            Hyunseok (Dan) Oh · Quantum Hardware Engineer
           </p>
         </Reveal>
       </div>
