@@ -211,7 +211,7 @@ export function BlochSphere({ className }: { className?: string }) {
     const drawLabel = (p: V3, r: number, cx: number, cy: number, text: string) => {
       const s = project(p, r, cx, cy)
       const front = s.depth >= 0
-      ctx.font = "700 13px var(--font-space-mono, monospace)"
+      ctx.font = "700 20px 'Space Mono', ui-monospace, monospace"
       ctx.fillStyle = `rgba(${CYAN}, ${front ? 0.9 : 0.35})`
       ctx.textAlign = "center"
       ctx.textBaseline = "middle"
@@ -284,8 +284,8 @@ export function BlochSphere({ className }: { className?: string }) {
       // state equation, floating just off the vector tip (violet)
       const tp = project(tip, r, cx, cy)
       const eqAlpha = tp.depth >= 0 ? 0.98 : 0.55
-      const offset = 22
-      ctx.font = "700 24px var(--font-space-mono, monospace)"
+      const offset = 26
+      ctx.font = "700 20px 'Space Mono', ui-monospace, monospace"
       ctx.textAlign = "left"
       ctx.textBaseline = "middle"
       const eqText = "|\u03C8> = \u03B1|0> + \u03B2|1>"
