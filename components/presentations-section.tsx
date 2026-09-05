@@ -25,6 +25,20 @@ const groups: Group[] = [
         date: "Mar 2026",
         link: "https://www.aps.org/events/2026/joint-meeting-2026",
       },
+      {
+        title: "Hybrid mechanical systems in diamond and smart-cut fabrication",
+        event: "UCSB EQuAL Seminar",
+        location: "Santa Barbara, CA, USA",
+        date: "Feb 2025",
+        link: "https://intriqate.ucsb.edu/equal-seminar",
+      },
+      {
+        title: "Fabrication of nanomechanical diamond devices via a scalable smart-cut method",
+        event: "Delft University of Technology",
+        location: "Delft, the Netherlands",
+        date: "Jun 2023",
+        link: "https://www.tudelft.nl/en/",
+      }
     ],
   },
   {
