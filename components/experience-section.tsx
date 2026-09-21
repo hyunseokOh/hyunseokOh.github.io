@@ -11,6 +11,14 @@ type Role = {
 
 const roles: Role[] = [
   {
+    org: "Google Quantum AI",
+    href: "https://quantumai.google/",
+    role: "Calibration Engineer",
+    period: "Sep 2026 — Present",
+    points: [
+    ],
+  },
+  {
     org: "Quantum Sensing and Imaging Group, UCSB",
     href: "https://www.10-9lab.com",
     role: "Graduate Student Researcher",
