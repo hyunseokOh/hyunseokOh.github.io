@@ -4,7 +4,6 @@ import { Space_Grotesk, Space_Mono } from 'next/font/google'
 import './globals.css'
 import { GoogleAnalytics } from '@next/third-parties/google'
 
-
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   variable: '--font-space-grotesk',
@@ -18,11 +17,19 @@ const spaceMono = Space_Mono({
   display: 'swap',
 })
 
+const siteUrl = 'https://hyunseokoh.github.io'
+const siteTitle = 'Hyunseok (Dan) Oh — Quantum Hardware Engineer'
+const siteDescription =
+  'Hyunseok (Dan) Oh, Quantum Hardware Engineer with hands-on experience across multiple qubit platforms. Building the hardware that makes the quantum future real.'
+
 export const metadata: Metadata = {
-  title: 'Hyunseok Oh — Quantum Hardware Engineer',
-  description:
-    'Hyunseok Oh, Quantum Hardware Engineer with hands-on experience across multiple qubit platforms. Building the hardware that makes the quantum future real.',
-  generator: 'v0.app',
+  metadataBase: new URL(siteUrl),
+  title: siteTitle,
+  description: siteDescription,
+  generator: null,
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: [
       {
@@ -39,6 +46,28 @@ export const metadata: Metadata = {
       },
     ],
     apple: '/atom.png',
+  },
+  openGraph: {
+    type: 'website',
+    url: siteUrl,
+    siteName: 'Hyunseok Oh',
+    title: siteTitle,
+    description: siteDescription,
+    locale: 'en_US',
+    images: [
+      {
+        url: '/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Hyunseok Oh, Quantum Hardware Engineer',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteTitle,
+    description: siteDescription,
+    images: ['/og.png'],
   },
 }
 
@@ -60,9 +89,8 @@ export default function RootLayout({
       <body className="antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
+        <GoogleAnalytics gaId="G-E336QLGGPX" />
       </body>
-      <GoogleAnalytics gaId="G-E336QLGGPX" />
-
     </html>
   )
 }
