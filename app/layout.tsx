@@ -1,4 +1,3 @@
-import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Space_Grotesk, Space_Mono } from 'next/font/google'
 import './globals.css'
@@ -31,20 +30,7 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   icons: {
-    icon: [
-      {
-        url: '/atom.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/atom.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/atom.svg',
-        type: 'image/svg+xml',
-      },
-    ],
+    icon: '/atom.png',
     apple: '/atom.png',
   },
   openGraph: {
@@ -88,7 +74,6 @@ export default function RootLayout({
     >
       <body className="antialiased">
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
         <GoogleAnalytics gaId="G-E336QLGGPX" />
       </body>
     </html>
