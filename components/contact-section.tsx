@@ -52,7 +52,7 @@ export function ContactSection() {
 
       <div className="relative z-10 mx-auto w-full max-w-4xl px-6 md:px-10">
         <Reveal>
-          <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.35em] text-primary">
+          <p className="flex items-center gap-3 font-sans font-medium text-xs uppercase tracking-[0.2em] text-primary">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary animate-quantum-blink" />
             Contact
           </p>
@@ -71,15 +71,15 @@ export function ContactSection() {
             href="mailto:hyunseok0222@gmail.com"
             className="group mt-10 flex items-center justify-between gap-4 rounded-xl border border-primary/30 bg-primary/5 p-6 transition-colors hover:border-primary/60 hover:bg-primary/10 md:p-8"
           >
-            <span className="flex items-center gap-4">
+            <span className="flex min-w-0 items-center gap-4">
               <span className="flex size-11 items-center justify-center rounded-lg border border-primary/30 bg-primary/10 text-primary">
                 <Mail className="size-5" />
               </span>
-              <span className="flex flex-col">
-                <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
+              <span className="flex min-w-0 flex-col">
+                <span className="font-sans font-medium text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
                   Email
                 </span>
-                <span className="text-pretty font-sans text-lg font-medium text-foreground sm:text-xl">
+                <span className="break-all font-sans text-lg font-medium text-foreground sm:text-xl">
                   hyunseok0222@gmail.com
                 </span>
               </span>
@@ -105,7 +105,7 @@ export function ContactSection() {
                       <Icon className="size-4.5" />
                     </span>
                     <span className="flex flex-col">
-                      <span className="font-mono text-[11px] uppercase tracking-[0.24em] text-muted-foreground">
+                      <span className="font-sans font-medium text-[11px] uppercase tracking-[0.14em] text-muted-foreground">
                         {p.label}
                       </span>
                       <span className="font-sans text-sm text-foreground">{p.handle}</span>
@@ -119,7 +119,7 @@ export function ContactSection() {
         </div>
 
         <Reveal delay={520}>
-          <p className="mt-16 text-center font-mono text-xs uppercase tracking-[0.28em] text-muted-foreground/70">
+          <p className="mt-16 text-center font-sans font-medium text-xs uppercase tracking-[0.16em] text-muted-foreground/70">
             Hyunseok (Dan) Oh · Quantum Hardware Engineer
           </p>
         </Reveal>

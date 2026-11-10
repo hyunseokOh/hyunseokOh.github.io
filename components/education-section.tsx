@@ -56,7 +56,7 @@ export function EducationSection() {
     >
       <div className="mx-auto w-full max-w-5xl px-6 md:px-10">
         <Reveal>
-          <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.35em] text-primary">
+          <p className="flex items-center gap-3 font-sans font-medium text-xs uppercase tracking-[0.2em] text-primary">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary animate-quantum-blink" />
             Education
           </p>
@@ -92,7 +92,7 @@ export function EducationSection() {
                       {s.name}
                       <ArrowUpRight className="size-4 shrink-0 opacity-70 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
                     </a>
-                    <span className="shrink-0 font-mono text-xs uppercase tracking-widest text-foreground">
+                    <span className="shrink-0 font-sans font-medium text-xs uppercase tracking-[0.12em] tabular-nums text-foreground">
                       {s.period}
                     </span>
                   </div>
@@ -102,7 +102,7 @@ export function EducationSection() {
                       {s.degrees.map((d) => (
                         <li
                           key={d}
-                          className="font-mono text-[13px] uppercase tracking-[0.14em] text-highlight-2"
+                          className="font-sans font-medium text-[13px] uppercase tracking-[0.14em] text-highlight-2"
                         >
                           {d}
                         </li>
@@ -111,7 +111,7 @@ export function EducationSection() {
                   )}
 
                   {s.honors && (
-                    <p className="mt-3 inline-block rounded-full border border-highlight-2/50 bg-highlight-2/15 px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-highlight-2">
+                    <p className="mt-3 inline-block rounded-full border border-highlight-2/50 bg-highlight-2/15 px-3 py-1 font-sans font-medium text-[11px] uppercase tracking-[0.12em] text-highlight-2">
                       {s.honors}
                     </p>
                   )}
@@ -126,7 +126,7 @@ export function EducationSection() {
                     <dl className="mt-5 space-y-3 border-t border-border/60 pt-5 text-sm">
                       {s.advisor && (
                         <div className="flex flex-col gap-0.5 sm:flex-row sm:gap-3">
-                          <dt className="w-24 shrink-0 font-mono text-[11px] uppercase tracking-widest text-muted-foreground">
+                          <dt className="w-24 shrink-0 font-sans font-medium text-[11px] uppercase tracking-[0.12em] text-muted-foreground">
                             Advisor
                           </dt>
                           <dd className="text-foreground/90">{s.advisor}</dd>
@@ -134,7 +134,7 @@ export function EducationSection() {
                       )}
                       {s.thesis && (
                         <div className="flex flex-col gap-0.5 sm:flex-row sm:gap-3">
-                          <dt className="w-24 shrink-0 font-mono text-[11px] uppercase tracking-widest text-muted-foreground">
+                          <dt className="w-24 shrink-0 font-sans font-medium text-[11px] uppercase tracking-[0.12em] text-muted-foreground">
                             Thesis
                           </dt>
                           <dd className="text-pretty leading-relaxed text-foreground/90">

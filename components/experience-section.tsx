@@ -16,6 +16,7 @@ const roles: Role[] = [
     role: "Calibration Engineer",
     period: "Sep 2026 — Present",
     points: [
+      "Calibrating superconducting quantum processors",
     ],
   },
   {
@@ -65,7 +66,7 @@ export function ExperienceSection() {
     >
       <div className="mx-auto w-full max-w-5xl px-6 md:px-10">
         <Reveal>
-          <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.35em] text-primary">
+          <p className="flex items-center gap-3 font-sans font-medium text-xs uppercase tracking-[0.2em] text-primary">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary animate-quantum-blink" />
             Experience
           </p>
@@ -109,12 +110,12 @@ export function ExperienceSection() {
                     {r.org}
                   </span>
                 )}
-                <span className="shrink-0 font-mono text-xs uppercase tracking-widest text-foreground">
+                <span className="shrink-0 font-sans font-medium text-xs uppercase tracking-[0.12em] tabular-nums text-foreground">
                   {r.period}
                 </span>
               </div>
 
-              <p className="mt-1.5 font-mono text-[13px] uppercase tracking-[0.18em] text-highlight-2">
+              <p className="mt-1.5 font-sans font-medium text-[13px] uppercase tracking-[0.18em] text-highlight-2">
                 {r.role}
               </p>
 

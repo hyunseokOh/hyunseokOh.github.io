@@ -24,9 +24,9 @@ export function HeroSection() {
       />
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col px-6 py-28 md:px-10">
-        <p className="animate-quantum-rise flex items-center gap-3 font-mono text-xs uppercase tracking-[0.35em] text-primary">
+        <p className="animate-quantum-rise flex items-center gap-3 font-sans font-medium text-xs uppercase tracking-[0.2em] text-primary">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary animate-quantum-blink" />
-          Portfolio
+          Google Quantum AI
         </p>
 
         <h1 className="animate-quantum-rise mt-6 text-balance font-sans text-5xl font-bold leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl" style={{ animationDelay: "0.05s" }}>

@@ -12,7 +12,7 @@ import { ContactSection } from "@/components/contact-section"
 
 export default function Page() {
   return (
-    <main className="relative min-h-svh bg-background text-foreground">
+    <main className="relative min-h-svh overflow-x-clip bg-background text-foreground">
       <SiteNav />
       <HeroSection />
       <AboutSection />

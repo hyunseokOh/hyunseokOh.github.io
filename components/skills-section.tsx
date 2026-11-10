@@ -76,7 +76,7 @@ function Chip({
   }
   return (
     <span
-      className={`rounded-md border px-2.5 py-1 font-mono text-[13px] leading-none transition-colors ${tones[tone]}`}
+      className={`rounded-md border px-2.5 py-1 font-sans font-medium text-[13px] leading-none transition-colors ${tones[tone]}`}
     >
       {children}
     </span>
@@ -91,7 +91,7 @@ export function SkillsSection() {
     >
       <div className="mx-auto w-full max-w-6xl px-6 md:px-10">
         <Reveal>
-          <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.35em] text-primary">
+          <p className="flex items-center gap-3 font-sans font-medium text-xs uppercase tracking-[0.2em] text-primary">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary animate-quantum-blink" />
             Professional Skills
           </p>
@@ -110,13 +110,13 @@ export function SkillsSection() {
                     <span className="flex size-9 items-center justify-center rounded-lg border border-primary/30 bg-primary/10 text-primary">
                       <Icon className="size-4.5" />
                     </span>
-                    <h3 className="font-mono text-sm uppercase tracking-[0.25em] text-highlight-2">
+                    <h3 className="font-sans font-medium text-sm uppercase tracking-[0.15em] text-highlight-2">
                       {c.title}
                     </h3>
                   </div>
 
                   {c.note && (
-                    <p className="mt-4 font-mono text-[11px] uppercase tracking-widest text-muted-foreground">
+                    <p className="mt-4 font-sans font-medium text-[11px] uppercase tracking-[0.12em] text-muted-foreground">
                       {c.note}
                     </p>
                   )}
@@ -139,14 +139,14 @@ export function SkillsSection() {
               <span className="flex size-9 items-center justify-center rounded-lg border border-primary/30 bg-primary/10 text-primary">
                 <Code2 className="size-4.5" />
               </span>
-              <h3 className="font-mono text-sm uppercase tracking-[0.25em] text-highlight-2">
+              <h3 className="font-sans font-medium text-sm uppercase tracking-[0.15em] text-highlight-2">
                 Programming
               </h3>
             </div>
 
             <div className="mt-6 grid gap-6 sm:grid-cols-[auto_1fr] sm:gap-8">
               <div className="flex items-start gap-4 sm:contents">
-                <span className="mt-1 shrink-0 font-mono text-[11px] uppercase tracking-widest text-highlight sm:mt-1.5">
+                <span className="mt-1 shrink-0 font-sans font-medium text-[11px] uppercase tracking-[0.12em] text-highlight sm:mt-1.5">
                   Proficient
                 </span>
                 <div className="flex flex-wrap gap-2">
@@ -159,7 +159,7 @@ export function SkillsSection() {
               </div>
 
               <div className="flex items-start gap-4 sm:contents">
-                <span className="mt-1 shrink-0 font-mono text-[11px] uppercase tracking-widest text-muted-foreground sm:mt-1.5">
+                <span className="mt-1 shrink-0 font-sans font-medium text-[11px] uppercase tracking-[0.12em] text-muted-foreground sm:mt-1.5">
                   Familiar
                 </span>
                 <div className="flex flex-wrap gap-2">

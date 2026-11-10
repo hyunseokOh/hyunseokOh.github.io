@@ -51,7 +51,7 @@ export function HonorsSection() {
     >
       <div className="mx-auto w-full max-w-5xl px-6 md:px-10">
         <Reveal>
-          <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.35em] text-primary">
+          <p className="flex items-center gap-3 font-sans font-medium text-xs uppercase tracking-[0.2em] text-primary">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary animate-quantum-blink" />
             Honors, Awards &amp; Fellowships
           </p>
@@ -70,7 +70,7 @@ export function HonorsSection() {
                     <span className="flex size-9 items-center justify-center rounded-lg border border-primary/30 bg-primary/10 text-primary">
                       <Icon className="size-4.5" />
                     </span>
-                    <h3 className="font-mono text-xs uppercase tracking-[0.3em] text-highlight-2">
+                    <h3 className="font-sans font-medium text-xs uppercase tracking-[0.18em] text-highlight-2">
                       {g.kind}
                     </h3>
                   </div>
@@ -85,7 +85,7 @@ export function HonorsSection() {
                           <span className="text-pretty font-sans font-medium leading-snug text-foreground">
                             {h.name}
                           </span>
-                          <span className="shrink-0 font-mono text-xs uppercase tracking-widest text-foreground">
+                          <span className="shrink-0 font-sans font-medium text-xs uppercase tracking-[0.12em] tabular-nums text-foreground">
                             {h.period}
                           </span>
                         </div>

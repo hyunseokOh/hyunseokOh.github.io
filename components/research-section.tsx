@@ -57,7 +57,7 @@ export function ResearchSection() {
     >
       <div className="mx-auto w-full max-w-6xl px-6 md:px-10">
         <Reveal>
-          <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.35em] text-primary">
+          <p className="flex items-center gap-3 font-sans font-medium text-xs uppercase tracking-[0.2em] text-primary">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary animate-quantum-blink" />
             Research
           </p>
@@ -91,10 +91,10 @@ export function ResearchSection() {
                   />
                   {p.metric && (
                     <div className="absolute bottom-3 left-4 flex items-baseline gap-2">
-                      <span className="font-mono text-xl tracking-tight text-highlight-2 [text-shadow:0_1px_10px_var(--background)]">
+                      <span className="font-sans font-medium text-xl tracking-tight text-highlight-2 [text-shadow:0_1px_10px_var(--background)]">
                         {p.metric.value}
                       </span>
-                      <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-foreground/80 [text-shadow:0_1px_8px_var(--background)]">
+                      <span className="font-sans font-medium text-[10px] uppercase tracking-[0.16em] text-foreground/80 [text-shadow:0_1px_8px_var(--background)]">
                         {p.metric.label}
                       </span>
                     </div>
@@ -112,10 +112,10 @@ export function ResearchSection() {
                   </p>
 
                   <div className="mt-auto flex flex-col gap-3 pt-6">
-                    <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
+                    <span className="font-sans font-medium text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
                       {p.lab}
                     </span>
-                    <span className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-widest text-primary">
+                    <span className="inline-flex items-center gap-1.5 font-sans font-medium text-xs uppercase tracking-[0.12em] text-primary">
                       Learn More
                       <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </span>

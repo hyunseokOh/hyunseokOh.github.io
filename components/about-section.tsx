@@ -31,7 +31,7 @@ export function AboutSection() {
         {/* Statement (right) */}
         <div>
           <Reveal from="right">
-            <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.35em] text-primary">
+            <p className="flex items-center gap-3 font-sans font-medium text-xs uppercase tracking-[0.2em] text-primary">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary animate-quantum-blink" />
               About
             </p>

@@ -85,7 +85,7 @@ export function PublicationsSection() {
     >
       <div className="mx-auto w-full max-w-5xl px-6 md:px-10">
         <Reveal>
-          <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.35em] text-primary">
+          <p className="flex items-center gap-3 font-sans font-medium text-xs uppercase tracking-[0.2em] text-primary">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary animate-quantum-blink" />
             Publications
           </p>
@@ -103,7 +103,7 @@ export function PublicationsSection() {
                 rel="noopener noreferrer"
                 className="group relative flex gap-4 border-b border-border/60 bg-card/40 p-6 transition-colors last:border-b-0 hover:bg-card/80 md:gap-6 md:p-8"
               >
-                <span className="shrink-0 font-mono text-sm tabular-nums text-muted-foreground/70">
+                <span className="shrink-0 font-sans font-medium text-sm tabular-nums text-muted-foreground/70">
                   {String(i + 1).padStart(2, "0")}
                 </span>
 
@@ -113,7 +113,7 @@ export function PublicationsSection() {
                     {p.highlight && (
                       <span
                         title="Selected work"
-                        className="mt-1 inline-flex shrink-0 items-center gap-1 rounded-full border border-highlight-2/40 px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-highlight-2"
+                        className="mt-1 inline-flex shrink-0 items-center gap-1 rounded-full border border-highlight-2/40 px-2 py-0.5 font-sans font-medium text-[10px] uppercase tracking-[0.12em] text-highlight-2"
                       >
                         <Star className="size-3 fill-current" />
                         Featured
@@ -123,7 +123,7 @@ export function PublicationsSection() {
                   <p className="mt-2 text-pretty text-sm leading-relaxed text-muted-foreground">
                     <Authors value={p.authors} />
                   </p>
-                  <p className="mt-2 font-mono text-xs uppercase tracking-widest text-highlight/80">
+                  <p className="mt-2 font-sans font-medium text-xs uppercase tracking-[0.12em] text-highlight/80">
                     {p.venue}
                   </p>
                 </div>
