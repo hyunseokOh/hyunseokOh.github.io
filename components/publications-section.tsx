@@ -128,7 +128,7 @@ export function PublicationsSection() {
                   </p>
                 </div>
 
-                <ArrowUpRight className="size-5 shrink-0 self-center text-muted-foreground/50 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-primary" />
+                <ArrowUpRight className="size-5 shrink-0 self-center text-muted-foreground/50 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-highlight" />
               </a>
             </Reveal>
           ))}
