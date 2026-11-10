@@ -68,7 +68,7 @@ export function EducationSection() {
         <div className="mt-16 space-y-6">
           {schools.map((s, i) => (
             <Reveal key={s.name} from="up" delay={i * 80}>
-              <article className="group flex flex-col overflow-hidden rounded-xl border border-border/60 bg-card/40 transition-colors hover:border-primary/40 md:flex-row">
+              <article className="group flex flex-col overflow-hidden rounded-xl border border-border/60 bg-card/40 transition-colors hover:border-highlight/40 md:flex-row">
                 <div className="relative h-40 shrink-0 overflow-hidden border-b border-border/60 md:h-auto md:w-56 md:border-b-0 md:border-r lg:w-64">
                   <img
                     src={s.image || "/placeholder.svg"}

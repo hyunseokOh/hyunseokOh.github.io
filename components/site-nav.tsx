@@ -117,7 +117,7 @@ function DesktopDropdown({ item, active }: { item: NavItem; active: string }) {
                   onClick={(e) => e.currentTarget.blur()}
                   aria-current={cur ? "location" : undefined}
                   className={cn(
-                    "block whitespace-nowrap rounded-md px-3 py-2.5 transition-colors hover:bg-primary/10 hover:text-foreground",
+                    "block whitespace-nowrap rounded-md px-3 py-2.5 transition-colors hover:bg-highlight/10 hover:text-foreground",
                     cur && "text-highlight",
                   )}
                 >

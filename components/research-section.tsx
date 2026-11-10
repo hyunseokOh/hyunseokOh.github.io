@@ -73,7 +73,7 @@ export function ResearchSection() {
                 href={p.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border/70 bg-background/60 transition-colors duration-300 hover:border-primary/50"
+                className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border/70 bg-background/60 transition-colors duration-300 hover:border-highlight/50"
               >
                 {/* Media panel — light backdrop so white figures read as intentional */}
                 <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-white to-slate-200">

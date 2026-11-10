@@ -69,7 +69,7 @@ function Chip({
 }) {
   const tones = {
     default:
-      "border-border/70 bg-secondary/40 text-foreground/85 hover:border-primary/40 hover:text-foreground",
+      "border-border/70 bg-secondary/40 text-foreground/85 hover:border-highlight/40 hover:text-foreground",
     primary:
       "border-highlight/40 bg-highlight/10 text-highlight hover:border-highlight/70",
     muted: "border-border/50 bg-transparent text-muted-foreground hover:text-foreground/80",
@@ -105,9 +105,9 @@ export function SkillsSection() {
             const Icon = c.icon
             return (
               <Reveal key={c.title} from="up" delay={i * 80}>
-                <div className="flex h-full flex-col rounded-xl border border-border/60 bg-card/40 p-6 transition-colors hover:border-primary/40 md:p-8">
+                <div className="flex h-full flex-col rounded-xl border border-border/60 bg-card/40 p-6 transition-colors hover:border-highlight/40 md:p-8">
                   <div className="flex items-center gap-3">
-                    <span className="flex size-9 items-center justify-center rounded-lg border border-primary/30 bg-primary/10 text-primary">
+                    <span className="flex size-9 items-center justify-center rounded-lg border border-highlight/30 bg-highlight/10 text-highlight">
                       <Icon className="size-4.5" />
                     </span>
                     <h3 className="font-sans font-medium text-sm uppercase tracking-[0.15em] text-highlight-2">
@@ -134,9 +134,9 @@ export function SkillsSection() {
 
         {/* Programming — spans full width with two proficiency tiers */}
         <Reveal from="up" delay={120}>
-          <div className="mt-6 rounded-xl border border-border/60 bg-card/40 p-6 transition-colors hover:border-primary/40 md:p-8">
+          <div className="mt-6 rounded-xl border border-border/60 bg-card/40 p-6 transition-colors hover:border-highlight/40 md:p-8">
             <div className="flex items-center gap-3">
-              <span className="flex size-9 items-center justify-center rounded-lg border border-primary/30 bg-primary/10 text-primary">
+              <span className="flex size-9 items-center justify-center rounded-lg border border-highlight/30 bg-highlight/10 text-highlight">
                 <Code2 className="size-4.5" />
               </span>
               <h3 className="font-sans font-medium text-sm uppercase tracking-[0.15em] text-highlight-2">

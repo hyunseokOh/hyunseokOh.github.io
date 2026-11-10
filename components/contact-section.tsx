@@ -69,10 +69,10 @@ export function ContactSection() {
         <Reveal from="up" delay={120}>
           <a
             href="mailto:hyunseok0222@gmail.com"
-            className="group mt-10 flex items-center justify-between gap-4 rounded-xl border border-primary/30 bg-primary/5 p-6 transition-colors hover:border-primary/60 hover:bg-primary/10 md:p-8"
+            className="group mt-10 flex items-center justify-between gap-4 rounded-xl border border-primary/30 bg-primary/5 p-6 transition-colors hover:border-highlight/60 hover:bg-primary/10 md:p-8"
           >
             <span className="flex min-w-0 items-center gap-4">
-              <span className="flex size-11 items-center justify-center rounded-lg border border-primary/30 bg-primary/10 text-primary">
+              <span className="flex size-11 items-center justify-center rounded-lg border border-highlight/30 bg-highlight/10 text-highlight">
                 <Mail className="size-5" />
               </span>
               <span className="flex min-w-0 flex-col">

@@ -10,10 +10,10 @@ export function AboutSection() {
         {/* Personal photo — placeholder frame (left) */}
         <Reveal from="left" className="relative mx-auto w-full max-w-xs sm:max-w-sm md:mx-0">
           {/* corner ticks */}
-          <span className="absolute -left-2 -top-2 h-5 w-5 border-l border-t border-primary/60" aria-hidden />
-          <span className="absolute -right-2 -top-2 h-5 w-5 border-r border-t border-primary/60" aria-hidden />
-          <span className="absolute -bottom-2 -left-2 h-5 w-5 border-b border-l border-primary/60" aria-hidden />
-          <span className="absolute -bottom-2 -right-2 h-5 w-5 border-b border-r border-primary/60" aria-hidden />
+          <span className="absolute -left-2 -top-2 h-5 w-5 border-l border-t border-highlight/60" aria-hidden />
+          <span className="absolute -right-2 -top-2 h-5 w-5 border-r border-t border-highlight/60" aria-hidden />
+          <span className="absolute -bottom-2 -left-2 h-5 w-5 border-b border-l border-highlight/60" aria-hidden />
+          <span className="absolute -bottom-2 -right-2 h-5 w-5 border-b border-r border-highlight/60" aria-hidden />
 
           <div className="relative aspect-[4/5] overflow-hidden rounded-lg border border-border bg-background">
             <img

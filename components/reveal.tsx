@@ -75,8 +75,7 @@ export function Reveal({
         shown ? "translate-x-0 translate-y-0 opacity-100" : hidden,
         className,
       )}
-      style={{ transitionDelay: shown ? `${delay}ms` : "0ms" }}
-    >
+      style={{ transitionDelay: shown ? `${delay}ms` : "0ms" }}    >
       {children}
     </Tag>
   )

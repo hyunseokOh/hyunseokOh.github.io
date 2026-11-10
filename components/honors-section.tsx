@@ -67,7 +67,7 @@ export function HonorsSection() {
               <Reveal key={g.kind} from="up" delay={gi * 100}>
                 <div className="h-full rounded-xl border border-border/60 bg-card/40 p-6 md:p-8">
                   <div className="flex items-center gap-3">
-                    <span className="flex size-9 items-center justify-center rounded-lg border border-primary/30 bg-primary/10 text-primary">
+                    <span className="flex size-9 items-center justify-center rounded-lg border border-highlight/30 bg-highlight/10 text-highlight">
                       <Icon className="size-4.5" />
                     </span>
                     <h3 className="font-sans font-medium text-xs uppercase tracking-[0.18em] text-highlight-2">
