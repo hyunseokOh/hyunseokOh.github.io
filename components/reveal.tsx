@@ -6,17 +6,19 @@ import { cn } from "@/lib/utils"
 type RevealProps = {
   children: ReactNode
   className?: string
-  /** delay in ms before the reveal transition starts */
+  /** delay in ms before the reveal transition starts (capped so long lists don't lag) */
   delay?: number
-  /** direction the element travels in from */
+  /** direction the element travels in from (sideways only on md+ screens) */
   from?: "up" | "left" | "right"
   as?: "div" | "section" | "li"
+  /** hide again when scrolled out of view, so the animation replays. Off by default. */
+  replay?: boolean
 }
 
 /**
- * Reveals its children with a fade + slide whenever they scroll into view,
- * and resets when they scroll back out so the animation replays on every
- * re-entry. Respects prefers-reduced-motion (renders visible immediately).
+ * Reveals its children with a fade + slide as soon as any part of them scrolls into view.
+ * By default it reveals once and stays visible, so a section is never left half shown.
+ * Respects prefers-reduced-motion (renders visible immediately).
  */
 export function Reveal({
   children,
@@ -24,6 +26,7 @@ export function Reveal({
   delay = 0,
   from = "up",
   as = "div",
+  replay = true,
 }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null)
   const [shown, setShown] = useState(false)
@@ -32,8 +35,7 @@ export function Reveal({
     const el = ref.current
     if (!el) return
 
-    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    if (prefersReduced) {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setShown(true)
       return
     }
@@ -41,22 +43,27 @@ export function Reveal({
     const io = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
-          // toggle so the reveal replays each time the element re-enters view
-          setShown(entry.isIntersecting)
+          if (entry.isIntersecting) {
+            setShown(true)
+            if (!replay) io.unobserve(entry.target)
+          } else if (replay) {
+            setShown(false)
+          }
         }
       },
-      { threshold: 0.15, rootMargin: "0px 0px -10% 0px" },
+      // threshold 0: start as soon as the first pixel enters, just above the bottom edge
+      { threshold: 0, rootMargin: "0px 0px -40px 0px" },
     )
     io.observe(el)
     return () => io.disconnect()
-  }, [])
+  }, [replay])
 
   const hidden =
     from === "left"
-      ? "-translate-x-10 opacity-0"
+      ? "translate-y-6 md:translate-y-0 md:-translate-x-8 opacity-0"
       : from === "right"
-        ? "translate-x-10 opacity-0"
-        : "translate-y-10 opacity-0"
+        ? "translate-y-6 md:translate-y-0 md:translate-x-8 opacity-0"
+        : "translate-y-6 opacity-0"
 
   const Tag = as
 
@@ -68,7 +75,7 @@ export function Reveal({
         shown ? "translate-x-0 translate-y-0 opacity-100" : hidden,
         className,
       )}
-      style={{ transitionDelay: `${delay}ms` }}
+      style={{ transitionDelay: shown ? `${delay}ms` : "0ms" }}
     >
       {children}
     </Tag>
