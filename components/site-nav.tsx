@@ -34,14 +34,64 @@ const items: NavItem[] = [
   { href: "#contact-section", label: "Contact" },
 ]
 
-function DesktopDropdown({ item }: { item: NavItem }) {
+// Every section the nav can point at, in page order.
+const sectionIds = Array.from(
+  new Set(items.flatMap((i) => [i.href, ...(i.children ?? []).map((c) => c.href)]).map((h) => h.slice(1))),
+)
+
+/**
+ * Returns the id of the section currently in the middle of the screen.
+ * A thin band around 45% of the viewport height decides which section is "current".
+ */
+function useActiveSection() {
+  const [active, setActive] = useState(sectionIds[0])
+
+  useEffect(() => {
+    const els = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null)
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) if (e.isIntersecting) setActive(e.target.id)
+      },
+      { rootMargin: "-45% 0px -54% 0px" },
+    )
+    els.forEach((el) => io.observe(el))
+
+    // The last section may never reach the band, so treat the page bottom as "Contact".
+    const onScroll = () => {
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4
+      if (atBottom) setActive(sectionIds[sectionIds.length - 1])
+    }
+    window.addEventListener("scroll", onScroll, { passive: true })
+
+    return () => {
+      io.disconnect()
+      window.removeEventListener("scroll", onScroll)
+    }
+  }, [])
+
+  return active
+}
+
+const isActiveLink = (l: NavLink, active: string) => l.href === `#${active}`
+const isActiveItem = (i: NavItem, active: string) =>
+  isActiveLink(i, active) || (i.children ?? []).some((c) => isActiveLink(c, active))
+
+function DesktopDropdown({ item, active }: { item: NavItem; active: string }) {
+  const current = isActiveItem(item, active)
   return (
     <div className="group/dd relative">
       <a
         href={item.href}
         onClick={(e) => e.currentTarget.blur()}
         aria-haspopup="true"
-        className="flex items-center gap-1 transition-colors hover:text-foreground group-hover/dd:text-foreground group-focus-within/dd:text-foreground"
+        aria-current={current ? "location" : undefined}
+        className={cn(
+          "flex items-center gap-1 transition-colors hover:text-foreground group-hover/dd:text-foreground group-focus-within/dd:text-foreground",
+          current && "text-highlight",
+        )}
       >
         {item.label}
         <ChevronDown className="size-3 transition-transform duration-200 group-hover/dd:rotate-180 group-focus-within/dd:rotate-180" />
@@ -58,17 +108,24 @@ function DesktopDropdown({ item }: { item: NavItem }) {
         )}
       >
         <ul className="min-w-48 rounded-lg border border-border/60 bg-background/95 p-1.5 shadow-[0_8px_30px_-12px_var(--primary)] backdrop-blur-md">
-          {item.children!.map((c) => (
-            <li key={c.href + c.label}>
-              <a
-                href={c.href}
-                onClick={(e) => e.currentTarget.blur()}
-                className="block whitespace-nowrap rounded-md px-3 py-2.5 transition-colors hover:bg-primary/10 hover:text-foreground"
-              >
-                {c.label}
-              </a>
-            </li>
-          ))}
+          {item.children!.map((c) => {
+            const cur = isActiveLink(c, active)
+            return (
+              <li key={c.href + c.label}>
+                <a
+                  href={c.href}
+                  onClick={(e) => e.currentTarget.blur()}
+                  aria-current={cur ? "location" : undefined}
+                  className={cn(
+                    "block whitespace-nowrap rounded-md px-3 py-2.5 transition-colors hover:bg-primary/10 hover:text-foreground",
+                    cur && "text-highlight",
+                  )}
+                >
+                  {c.label}
+                </a>
+              </li>
+            )
+          })}
         </ul>
       </div>
     </div>
@@ -77,6 +134,7 @@ function DesktopDropdown({ item }: { item: NavItem }) {
 
 export function SiteNav() {
   const [open, setOpen] = useState(false)
+  const active = useActiveSection()
 
   // Close the phone menu on Escape, and when the viewport grows past the lg breakpoint.
   useEffect(() => {
@@ -111,9 +169,17 @@ export function SiteNav() {
         <nav className="hidden items-center gap-8 font-sans text-[13px] font-medium uppercase tracking-[0.12em] text-foreground/70 lg:flex">
           {items.map((item) =>
             item.children ? (
-              <DesktopDropdown key={item.href} item={item} />
+              <DesktopDropdown key={item.href} item={item} active={active} />
             ) : (
-              <a key={item.href} href={item.href} className="transition-colors hover:text-foreground">
+              <a
+                key={item.href}
+                href={item.href}
+                aria-current={isActiveItem(item, active) ? "location" : undefined}
+                className={cn(
+                  "transition-colors hover:text-foreground",
+                  isActiveItem(item, active) && "text-highlight",
+                )}
+              >
                 {item.label}
               </a>
             ),
@@ -139,7 +205,9 @@ export function SiteNav() {
         aria-hidden={!open}
         className={cn(
           "grid overflow-hidden border-t border-border/40 transition-[grid-template-rows,opacity] duration-300 ease-out lg:hidden",
-          open ? "grid-rows-[1fr] opacity-100" : "pointer-events-none grid-rows-[0fr] border-t-transparent opacity-0",
+          open
+            ? "grid-rows-[1fr] bg-background/95 opacity-100"
+            : "pointer-events-none grid-rows-[0fr] border-t-transparent opacity-0",
         )}
       >
         <ul className="min-h-0 max-h-[calc(100svh-5rem)] overflow-y-auto px-6 font-sans text-sm font-medium uppercase tracking-[0.12em] text-muted-foreground">
@@ -147,7 +215,14 @@ export function SiteNav() {
             <li key={item.href}>
               {item.children ? (
                 <>
-                  <span className="block pt-3 pb-1 text-foreground/90">{item.label}</span>
+                  <span
+                    className={cn(
+                      "block pt-3 pb-1 text-foreground/90",
+                      isActiveItem(item, active) && "text-highlight",
+                    )}
+                  >
+                    {item.label}
+                  </span>
                   <ul className="mb-1 ml-1 border-l border-border/60">
                     {item.children.map((c) => (
                       <li key={c.href + c.label}>
@@ -155,7 +230,11 @@ export function SiteNav() {
                           href={c.href}
                           tabIndex={open ? 0 : -1}
                           onClick={close}
-                          className="block py-2.5 pl-4 text-xs transition-colors hover:text-foreground"
+                          aria-current={isActiveLink(c, active) ? "location" : undefined}
+                          className={cn(
+                            "block py-2.5 pl-4 text-xs transition-colors hover:text-foreground",
+                            isActiveLink(c, active) && "text-highlight",
+                          )}
                         >
                           {c.label}
                         </a>
@@ -168,7 +247,11 @@ export function SiteNav() {
                   href={item.href}
                   tabIndex={open ? 0 : -1}
                   onClick={close}
-                  className="block py-3 transition-colors hover:text-foreground"
+                  aria-current={isActiveItem(item, active) ? "location" : undefined}
+                  className={cn(
+                    "block py-3 transition-colors hover:text-foreground",
+                    isActiveItem(item, active) && "text-highlight",
+                  )}
                 >
                   {item.label}
                 </a>

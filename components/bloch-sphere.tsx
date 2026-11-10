@@ -24,6 +24,16 @@ export function BlochSphere({ className }: { className?: string }) {
 
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches
 
+    // Use the site font (Space Grotesk) for the canvas labels. next/font exposes its
+    // generated family name through this CSS variable on <html>.
+    const siteFont =
+      getComputedStyle(document.documentElement).getPropertyValue("--font-space-grotesk").trim() || "sans-serif"
+    const LABEL_FONT = `700 20px ${siteFont}, ui-sans-serif, sans-serif`
+
+    // Height of the fixed header, so the sphere is centered in the space below it
+    // and the |0> label is not hidden behind the header.
+    const HEADER_H = 72
+
     let width = 0
     let height = 0
     let dpr = Math.min(window.devicePixelRatio || 1, 2)
@@ -77,9 +87,10 @@ export function BlochSphere({ className }: { className?: string }) {
 
     // sphere placement: centred, offset a little to the right on wide screens
     const layout = () => {
-      const r = Math.min(width, height) * (width > 900 ? 0.34 : 0.3)
+      const usableH = Math.max(1, height - HEADER_H)
+      const r = Math.min(width, usableH) * (width > 900 ? 0.34 : 0.3)
       const cx = width > 900 ? width * 0.68 : width * 0.5
-      const cy = height * 0.5
+      const cy = HEADER_H + usableH * 0.5
       return { r, cx, cy }
     }
 
@@ -211,7 +222,7 @@ export function BlochSphere({ className }: { className?: string }) {
     const drawLabel = (p: V3, r: number, cx: number, cy: number, text: string) => {
       const s = project(p, r, cx, cy)
       const front = s.depth >= 0
-      ctx.font = "700 20px 'Space Mono', ui-monospace, monospace"
+      ctx.font = LABEL_FONT
       ctx.fillStyle = `rgba(${CYAN}, ${front ? 0.9 : 0.35})`
       ctx.textAlign = "center"
       ctx.textBaseline = "middle"
@@ -285,7 +296,7 @@ export function BlochSphere({ className }: { className?: string }) {
       const tp = project(tip, r, cx, cy)
       const eqAlpha = tp.depth >= 0 ? 0.98 : 0.55
       const offset = 26
-      ctx.font = "700 20px 'Space Mono', ui-monospace, monospace"
+      ctx.font = LABEL_FONT
       ctx.textAlign = "left"
       ctx.textBaseline = "middle"
       const eqText = "|\u03C8> = \u03B1|0> + \u03B2|1>"

@@ -55,6 +55,39 @@ export const viewport: Viewport = {
   themeColor: '#0a0e17',
 }
 
+// Structured data so search engines can connect this site to your profiles and publications.
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Hyunseok Oh',
+  alternateName: ['Dan Oh', 'Hyunseok (Dan) Oh'],
+  url: siteUrl,
+  image: `${siteUrl}/portrait.jpg`,
+  jobTitle: 'Calibration Engineer',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Google Quantum AI',
+    url: 'https://quantumai.google/',
+  },
+  alumniOf: [
+    { '@type': 'CollegeOrUniversity', name: 'University of California, Santa Barbara' },
+    { '@type': 'CollegeOrUniversity', name: 'Seoul National University' },
+  ],
+  knowsAbout: [
+    'Quantum hardware',
+    'Qubit calibration',
+    'Diamond optomechanics',
+    'NV centers',
+    'Nanofabrication',
+  ],
+  sameAs: [
+    'https://linkedin.com/in/hyunseok0222',
+    'https://github.com/hyunseokOh',
+    'https://scholar.google.com/citations?hl=en&user=GpharwMAAAAJ',
+    'https://orcid.org/0000-0003-0076-3844',
+  ],
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -66,6 +99,10 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} bg-background`}
     >
       <body className="antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         {children}
         <GoogleAnalytics gaId="G-E336QLGGPX" />
       </body>
